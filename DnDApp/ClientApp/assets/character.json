@@ -1,0 +1,27 @@
+[
+  {
+    "Id": 1,
+    "Name": "ted James",
+    "Race": " Phoenix "
+     
+  },
+  {
+    "Id": 2,
+    "Name": "Michelle Thompson",
+    "Race": "Los Angeles "
+     
+  },
+  {
+    "Id": 3,
+    "Name": "James Thomas",
+    "Race": " Las Vegas "
+     
+  },
+  {
+    "Id": 4,
+    "Name": "Tina Adams",
+    "Race": "Seattle"
+    
+  }
+]
+

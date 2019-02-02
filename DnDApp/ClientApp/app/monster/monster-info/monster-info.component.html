@@ -1,0 +1,64 @@
+ 
+<div *ngIf="receivedMonster" class="card">
+  <img src="{{receivedMonster[0].name}}.png" alt="Avatar" style="width:100%">
+  <div class="container">
+    <h4><b>Name: {{receivedMonster[0].name}}</b></h4>
+    <p>Size :{{receivedMonster[0].size}}</p>
+    <p>Type: {{receivedMonster[0].type}}</p>
+    <p>Alignment: {{receivedMonster[0].alignment}}</p>
+    <div>
+      <table align="center">
+
+        <thead>
+          <tr>
+            <th>STR</th>
+            <th>DEX</th>
+            <th>CON</th>
+            <th>INT</th>
+            <th>WIS</th>
+            <th>CHA</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{receivedMonster[0].strength}}</td>
+          <td>{{receivedMonster[0].dexterity}} </td>
+          <td>{{receivedMonster[0].constitution}} </td>
+          <td>{{receivedMonster[0].intelligence}} </td>
+          <td>{{receivedMonster[0].wisdom}} </td>
+          <td>{{receivedMonster[0].charisma}} </td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+
+    </div>
+    
+
+    <div *ngIf="receivedMonster[0].actions" class="actions">
+      Actions:
+      <dl type="1" *ngFor="let action of receivedMonster[0].actions">
+        <dt>{{action.name}}</dt>
+        <dd>{{action.desc}}</dd>
+        <dd *ngIf="action.attack_bonus">Attack Bonus: {{action.attack_bonus}}</dd>
+        <dd *ngIf="action.damage_dice">Damage Dice: {{action.damage_dice}}</dd>
+        <dd *ngIf="action.damage_bonus">Damage Bonus: {{action.damage_bonus}}</dd>
+
+      </dl>
+
+    </div>
+
+    <div *ngIf="receivedMonster[0].legendary_actions" class="legendary_actions">
+      Legendary Actions:
+      <dl type="1" *ngFor="let legendary_action of receivedMonster[0].legendary_actions">
+        <dt>{{legendary_action.name}}</dt>
+        <dd>{{legendary_action.desc}}</dd>
+
+      </dl>
+
+    </div>
+  </div>
+</div>
