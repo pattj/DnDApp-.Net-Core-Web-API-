@@ -34,6 +34,8 @@ namespace DnDApp.Data.Models
         [Required]
         public DateTime LastModifiedDate { get; set; }
 
+        public string Campaigns { get; set; }
+
         #region Lazy-Load Properties
         /// <summary>
         /// The owner of the character: it will be loaded
