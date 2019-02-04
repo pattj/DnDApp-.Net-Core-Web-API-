@@ -7,6 +7,7 @@ using System.Threading.Tasks;
  
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DnDApp.Data.Models;
 
 namespace DnDApp.ViewModels
 {
@@ -19,6 +20,6 @@ namespace DnDApp.ViewModels
         public int Id { get; set; }
         public string Name { get; set; }
         public string Race { get; set; }
-
+        public Classes CharacterClass { get; set;}
     }
 }

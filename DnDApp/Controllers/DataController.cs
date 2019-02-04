@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DnDApp.Data.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DnDApp.Controllers
@@ -14,6 +15,8 @@ namespace DnDApp.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            Classes testClass = new Classes("Barbarian");
+
             return new string[] { "value1", "value2" };
         }
 
