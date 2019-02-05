@@ -7,6 +7,20 @@ export interface ICharacter {
   
 }
 
+export interface IRace {
+    
+    raceName: string,
+    Description: string,
+    raceBonuses: Array<number>,
+    bonusNotes: string,
+    size: string,
+    speed: number,
+    speedNotes: string,
+    Vision: string,
+    raceAbilities:  Array<string>
+
+}
+
 export interface IUser {
   UserId: number;
   Characters: Character[];

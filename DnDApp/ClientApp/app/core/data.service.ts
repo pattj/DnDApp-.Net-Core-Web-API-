@@ -4,7 +4,7 @@ import { HttpClient, } from '@angular/common/http';
 
 import { Observable, empty,  } from 'rxjs';
 import { map, catchError, expand, tap, concatMap, scan, reduce } from 'rxjs/operators';
-import { ICharacter } from '../shared/interfaces';
+import { ICharacter, IRace } from '../shared/interfaces';
 import { IMonster } from '../shared/interfaces';
 
 
@@ -23,7 +23,15 @@ export class DataService {
 
         catchError(this.handleError)
       );
-  }
+    }
+
+    getRaces(): Observable<IRace[]> {
+        return this.http.get<IRace[]>('http://localhost:8840/api/racesss')
+            .pipe(
+
+                catchError(this.handleError)
+            );
+    }
 
   getUsers(): Observable<ICharacter[]> {
     return this.http.get<ICharacter[]>('./assets/character.json')
