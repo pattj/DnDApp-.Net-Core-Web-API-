@@ -26,7 +26,7 @@ export class DataService {
     }
 
     getRaces(): Observable<IRace[]> {
-        return this.http.get<IRace[]>('http://localhost:8840/api/racesss')
+        return this.http.get<IRace[]>('http://localhost:8840/api/races')
             .pipe(
 
                 catchError(this.handleError)
