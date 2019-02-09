@@ -17,20 +17,24 @@ namespace DnDApp.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+            var RaceList = new RaceList();
+            var ClassList = new ClassList();
             var SampleCharacters = new List<Character>();
 
             SampleCharacters.Add(new Character()
             {
                 Id = 1,
                 Name = "Jim",
-                Race = "Elf"
+                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Dragonborn").FirstOrDefault(),
+                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Paladin").FirstOrDefault(),
             }
       );
             SampleCharacters.Add(new Character()
             {
                 Id = 2,
                 Name = "Vinh",
-                Race = "Human"
+                Race =  RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(),
+                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Bard").FirstOrDefault(),
             }
       );
 
@@ -39,7 +43,8 @@ namespace DnDApp.Controllers
                 {
                 Id = 3,
                 Name ="Connor",
-                Race = "Human"
+                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(),
+                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Fighter").FirstOrDefault(),
             }
                 );
 
@@ -47,7 +52,9 @@ namespace DnDApp.Controllers
                 {
                 Id = 4,
                 Name ="Kurt",
-                Race = "Orc"
+                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Drow").FirstOrDefault(),
+                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Ranger").FirstOrDefault(),
+
             }
                 );
 
