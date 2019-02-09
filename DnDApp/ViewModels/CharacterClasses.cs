@@ -5,9 +5,9 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DnDApp.Data.Models
+namespace DnDApp.ViewModels
 {
-    public class Classes
+    public class CharacterClasses
     {
 
         [JsonProperty("description")]
@@ -41,12 +41,13 @@ namespace DnDApp.Data.Models
         public List<string> EquipmentChoice4 { get; set; }
         [JsonProperty("otherEquipment")]
         public List<string> otherEquipment { get; set; }
-        public List<string> startingClassAbilities { get; set; }
-      //  public AbilityJson classAbilities { get; set; }
+        // public List<string> startingClassAbilities { get; set; }
+        [JsonProperty("ClassAbilities")]
+        public AbilityJson ClassAbilities { get; set; }
         [JsonProperty("Subclass")]
         public List<string> Subclass { get; set; }
 
-        public Classes(string className)
+        public CharacterClasses(string className)
         {
             //parse Json using the className
           //  string fileLocation = Directory.GetCurrentDirectory() + "\\Data\\ClassesJson\\" + className +".json";
@@ -57,4 +58,32 @@ namespace DnDApp.Data.Models
         }
 
     }
+
+    public class ClassList 
+    {
+        public List<CharacterClasses> avaliableClasses = new List<CharacterClasses>();
+
+        public ClassList()
+        {
+            //fetch character classes from JSON
+            string classesFolderLocation = Directory.GetCurrentDirectory() + "\\Data\\Classes";
+            string[] classesJson = Directory.GetFiles(classesFolderLocation);
+
+            foreach (string rJ in classesJson)
+            {
+                avaliableClasses.Add(JsonConvert.DeserializeObject<CharacterClasses>(File.ReadAllText(rJ)));
+
+            }
+
+            foreach (CharacterClasses ClassObj in avaliableClasses)
+            {
+                var fileLocation = Directory.GetCurrentDirectory() + "\\Data\\AbilitiesJson\\" + ClassObj.clName +" Abilities.json";
+                ClassObj.ClassAbilities = JsonConvert.DeserializeObject<AbilityJson>(File.ReadAllText(fileLocation));
+            }
+        }
+ 
+        
+    }
+
+    
 }

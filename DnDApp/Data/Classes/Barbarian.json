@@ -1,5 +1,5 @@
 {
-  "className": "Barbarian",
+  "Class Name": "Barbarian",
   "description": "A fierce warrior of primitive background who can enter a battle rage.",
   "magicUser": false,
   "hitdice": "d12",
@@ -45,4 +45,7 @@
     "Path of the Berserker",
     "Path of the Totem Warrior"
   ]
+
+  
+
 }

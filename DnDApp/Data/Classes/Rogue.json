@@ -1,5 +1,5 @@
 {
-  "className": "Rogue",
+  "Class Name": "Rogue",
   "description": "A scoundrel who uses stealth and trickery to overcome obstacles and enemies.",
   "magicUser": true,
   "hitdice": "d8",

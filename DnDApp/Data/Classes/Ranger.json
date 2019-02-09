@@ -1,5 +1,5 @@
 {
-  "className": "Ranger",
+  "Class Name": "Ranger",
   "description": "A warrior who uses martial prowess and nature magic to combat threats on the edges of civilization.",
   "magicUser": true,
   "hitdice": "d10",

@@ -1,5 +1,5 @@
 {
-  "className": "Cleric",
+  "Class Name": "Cleric",
   "description": "A priestly champion who wields divine magic in service of a higher power.",
   "magicUser": true,
   "hitdice": "d8",

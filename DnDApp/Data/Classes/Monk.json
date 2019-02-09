@@ -1,5 +1,5 @@
 {
-  "className": "Monk",
+  "Class Name": "Monk",
   "description": "An master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection.",
   "magicUser": true,
   "hitdice": "d8",

@@ -1,28 +1,27 @@
 {
-  "className": "Sorcerer",
-  "description": "A spellcaster who draws on inherent magic from a gift or bloodline",
+  "Class Name": "Warlock",
+  "description": "A wielder of magic that is derived from a bargain with an extraplanar entity.",
   "magicUser": true,
-  "hitdice": "d6",
-  "armourProf": [],
+  "hitdice": "d8",
+  "armourProf": [
+    "Light Armour"
+  ],
   "weaponProf": [
-    "Daggers",
-    "Darts",
-    "Slings",
-    "Quarterstaffs",
-    "Light Crossbows"
+    "Simple Weapons"
   ],
   "toolProf": [],
   "savingProf": [
-    "Constitution",
+    "Wisdom",
     "Charisma"
   ],
   "skillChoices": 2,
   "skillsToChoose": [
     "Arcana",
     "Deception",
-    "Insight",
+    "History",
     "Intimidation",
-    "Persuasion",
+    "Investigation",
+    "Nature",
     "Religion"
   ],
   "EquipmentChoice1": [
@@ -34,17 +33,21 @@
     "Arcane Focus"
   ],
   "EquipmentChoice3": [
-    "Dungeoneer's Pack",
-    "Explorer's Pack"
+    "Scholar's Pack",
+    "Dungeoneer's Pack"
   ],
   "EquipmentChoice4": [
+
   ],
   "otherEquipment": [
+    "Leather Armour",
+    "Any Simple Weapon",
     "Two Daggers"
   ],
   "startingClassAbilities": [],
   "Subclass": [
-    "Draconic Bloodline",
-    "Wild Magic"
+    "Archfey",
+    "The Fiend",
+    "The Great Old One"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "className": "Wizard",
+  "Class Name": "Wizard",
   "description": "A scholarly magic-user capable of manipulating the structures of reality.",
   "magicUser": true,
   "hitdice": "d6",

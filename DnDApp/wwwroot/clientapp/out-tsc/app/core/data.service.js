@@ -20,6 +20,10 @@ var DataService = /** @class */ (function () {
         return this.http.get('http://localhost:8840/api/character')
             .pipe(catchError(this.handleError));
     };
+    DataService.prototype.getRaces = function () {
+        return this.http.get('http://localhost:8840/api/races')
+            .pipe(catchError(this.handleError));
+    };
     DataService.prototype.getUsers = function () {
         return this.http.get('./assets/character.json')
             .pipe(catchError(this.handleError));

@@ -1,5 +1,5 @@
 {
-  "className": "Fighter",
+  "Class Name": "Fighter",
   "description": "A master of martial combat, skilled with a variety of weapons and armour.",
   "magicUser": true,
   "hitdice": "d10",

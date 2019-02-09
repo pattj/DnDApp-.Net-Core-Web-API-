@@ -13,12 +13,13 @@ namespace DnDApp.Controllers
     [Route("api/[controller]")]
     public class RacesController : Controller
     {
+        RaceList raceList = new RaceList();
         // GET: api/<controller>
         //Return  list of character races
         [HttpGet]
         public IActionResult Get()
         {
-            var raceList = new RaceList();
+            
 
             return new JsonResult(
             raceList,
@@ -30,10 +31,15 @@ namespace DnDApp.Controllers
 
         // GET api/<controller>/5
         //Return information about the race that the user selected/passed  in
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{raceName}")]
+        public IActionResult Get(string raceName)
         {
-            return "value";
+            return new JsonResult(
+           raceList.avaliableRaces.Where(raceObj => raceObj.raceName.ToLower() == raceName.ToLower()),
+           new JsonSerializerSettings()
+           {
+               Formatting = Formatting.Indented
+           });
         }
 
      

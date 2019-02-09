@@ -15,7 +15,7 @@ namespace DnDApp.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            Classes testClass = new Classes("Barbarian");
+           // Classes testClass = new Classes("Barbarian");
 
             return new string[] { "value1", "value2" };
         }

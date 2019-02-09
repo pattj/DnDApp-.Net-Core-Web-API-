@@ -1,5 +1,5 @@
 {
-  "className": "Paladin",
+  "Class Name": "Paladin",
   "description": "A holy warrior bound to a sacred oath.",
   "magicUser": true,
   "hitdice": "d10",
