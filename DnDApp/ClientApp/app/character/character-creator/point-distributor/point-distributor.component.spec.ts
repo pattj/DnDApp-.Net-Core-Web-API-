@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CharacterCreatorComponent } from './character-creator.component';
+import { PointDistributorComponent } from './point-distributor.component';
 
-describe('CharacterCreatorComponent', () => {
-  let component: CharacterCreatorComponent;
-  let fixture: ComponentFixture<CharacterCreatorComponent>;
+describe('PointDistributorComponent', () => {
+  let component: PointDistributorComponent;
+  let fixture: ComponentFixture<PointDistributorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CharacterCreatorComponent ]
+      declarations: [ PointDistributorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CharacterCreatorComponent);
+    fixture = TestBed.createComponent(PointDistributorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

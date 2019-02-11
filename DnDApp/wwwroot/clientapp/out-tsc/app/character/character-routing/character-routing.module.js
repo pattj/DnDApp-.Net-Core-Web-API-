@@ -7,8 +7,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CharactersComponent } from '../characters/characters.component';
+import { RaceSelectorComponent } from '../character-creator/race-selector/race-selector.component';
 var routes = [
     { path: 'characters', pathMatch: 'full', component: CharactersComponent },
+    { path: 'charactercreator', pathMatch: 'full', component: RaceSelectorComponent },
 ];
 var CharacterRoutingModule = /** @class */ (function () {
     function CharacterRoutingModule() {

@@ -11,7 +11,7 @@ import { CharactersComponent } from './characters/characters.component';
 import { CharactersListComponent } from './characters-list/characters-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { CharacterRoutingModule } from './character-routing/character-routing.module';
-import { CharacterCreatorComponent } from './character-creator/character-creator.component';
+import { CharacterCreatorModule } from './character-creator/character-creator.module';
 var CharacterModule = /** @class */ (function () {
     function CharacterModule() {
     }
@@ -20,9 +20,10 @@ var CharacterModule = /** @class */ (function () {
             imports: [
                 CommonModule,
                 SharedModule,
-                CharacterRoutingModule
+                CharacterRoutingModule,
+                CharacterCreatorModule
             ],
-            declarations: [CharactersComponent, CharactersListComponent, CharacterCreatorComponent,],
+            declarations: [CharactersComponent, CharactersListComponent],
             exports: [CharactersComponent]
         })
     ], CharacterModule);

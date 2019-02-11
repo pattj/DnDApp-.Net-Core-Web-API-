@@ -21,39 +21,33 @@ namespace DnDApp.Controllers
             var ClassList = new ClassList();
             var SampleCharacters = new List<Character>();
 
-            SampleCharacters.Add(new Character()
+            SampleCharacters.Add(new Character("Chris", RaceList.avaliableRaces.Where(race => race.raceName == "Dragonborn").FirstOrDefault(),
+                ClassList.avaliableClasses.Where(classObj => classObj.clName == "Paladin").FirstOrDefault())
             {
-                Id = 1,
-                Name = "Jim",
-                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Dragonborn").FirstOrDefault(),
-                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Paladin").FirstOrDefault(),
+                Id = 1
             }
+ 
       );
-            SampleCharacters.Add(new Character()
+            SampleCharacters.Add(new Character("Vinh", RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(), ClassList.avaliableClasses.Where(classObj => classObj.clName == "Bard").FirstOrDefault())
             {
                 Id = 2,
-                Name = "Vinh",
-                Race =  RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(),
-                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Bard").FirstOrDefault(),
+                
             }
       );
 
 
-            SampleCharacters.Add(new Character()
+            SampleCharacters.Add(new Character("Connor", RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(), ClassList.avaliableClasses.Where(classObj => classObj.clName == "Fighter").FirstOrDefault())
                 {
                 Id = 3,
-                Name ="Connor",
-                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Humans").FirstOrDefault(),
-                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Fighter").FirstOrDefault(),
+                 
+             
             }
                 );
 
-            SampleCharacters.Add(new Character()
+            SampleCharacters.Add(new Character("Kurt", RaceList.avaliableRaces.Where(race => race.raceName == "Drow").FirstOrDefault(), ClassList.avaliableClasses.Where(classObj => classObj.clName == "Ranger").FirstOrDefault())
                 {
                 Id = 4,
-                Name ="Kurt",
-                Race = RaceList.avaliableRaces.Where(race => race.raceName == "Drow").FirstOrDefault(),
-                CharacterClass = ClassList.avaliableClasses.Where(classObj => classObj.clName == "Ranger").FirstOrDefault(),
+              
 
             }
                 );
